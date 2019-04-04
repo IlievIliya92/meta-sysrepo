@@ -1,0 +1,26 @@
+From 7469ebe267d8cab380f933f1c391d76e13c561a7 Mon Sep 17 00:00:00 2001
+From: Iliya Iliev <iliyailiev3592@gmail.com>
+Date: Thu, 4 Apr 2019 11:36:50 +0300
+Subject: [PATCH] Disable sysrepo custom memory manager
+
+Signed-off-by: Iliya Iliev <iliyailiev3592@gmail.com>
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b50df76..a3bcb6f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -163,7 +163,7 @@ set(NACM_RECOVERY_UID 0 CACHE INTEGER
+ set(ENABLE_NOTIF_STORE 1 CACHE BOOL
+     "Enable event notifications store & notifications replay.")
+ 
+-set(USE_SR_MEM_MGMT 1 CACHE BOOL
++set(USE_SR_MEM_MGMT 0 CACHE BOOL
+     "Use Sysrepo's own memory management (better overall performance but more difficult to track memory bugs).")
+ 
+ set(LOG_THREAD_ID 0 CACHE BOOL
+-- 
+2.7.4
+
